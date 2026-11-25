@@ -1,11 +1,363 @@
 {
  "health": {
   "alerted_down": false,
-  "consecutive_failures": 1,
-  "last_error": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&region[]=3&city[]=1112&city[]=1113&city[]=2&city[]=1248&city[]=4&city[]=3129&city[]=2597&city[]=5&city[]=41&city[]=43&city[]=1250&city[]=3465&city[]=1519&city[]=1249&city[]=1251&currency_id=5&list=detail: HTTP 403",
-  "last_ok": null,
-  "last_run": "2026-11-25T11:37:13+00:00"
+  "consecutive_failures": 0,
+  "last_error": null,
+  "last_ok": "2026-11-25T11:45:10+00:00",
+  "last_run": "2026-11-25T11:45:10+00:00"
  },
- "initialized": false,
- "listings": {}
+ "initialized": true,
+ "listings": {
+  "20078": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "20078",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Slim",
+   "notified": true,
+   "price": 650.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     650.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "650 USD",
+   "text": "PS5 SLIM cfi 2016,версия с памятью 1 TB, в пользовании была меньше месяца, имеет абсолютно новое состояние как внешне так и технически, как будто вы только распечатали новый товар с магазина, при доставке вы сами убедитесь в ее новом состоянии, цена 650 у. е. (10630 рубл. )\nПри необходимости могу у",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/336/000074336638.jpg",
+   "title": "PS 5 SLIM, новая как с завода, меньше месяца в использовании",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20078",
+   "usd": 650.0
+  },
+  "20202": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": null,
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "20202",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "PS5",
+   "notified": true,
+   "price": null,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     null,
+     null
+    ]
+   ],
+   "price_raw": "",
+   "text": "Дрифтит геймпад? Шумит консоль? Или выключается по перегреву? \nПредлагаем качественный сервис ваших игровых приставок и джойстиков: Play Station 5 / 4; XBox. \nЗамена стиков (аналогов) как на оригинальные от Alps, так и на улучшенные (Холл, TMR). \nТаблица с ключевыми отличиями на последнем фото.",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/406/000074406338.jpg",
+   "title": "Подготовь PlayStation 5 к GTA VI — приноси на чистку и замену стиков!",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20202",
+   "usd": null
+  },
+  "20312": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "20312",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Slim",
+   "notified": true,
+   "price": 650.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     650.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "650 USD",
+   "text": "PS5 SLIM cfi 2116,самая последняя ревизия слим, в пользовании была 3 месяца, прошли пару игр, имеет абсолютно новое состояние что консоль что джойстик не единой царапины + куплены дорогие игры Ghost of Yotei, God of War Ragnarok, Spider man Miles Morales, Звездные войны Джедаи Павший орден, цена за",
+   "thumb": "https://media.makler.md/production/an/thumb/000/073/967/000073967855.jpg",
+   "title": "PS5 SLIM 2116 новая + Ghost of Yotei, God of War Ragnarok, Spiderman",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20312",
+   "usd": 650.0
+  },
+  "20411": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "yes",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "20411",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Slim",
+   "notified": true,
+   "price": 750.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     750.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "750 USD",
+   "text": "PS5 SLIM 1 TB с дисководом + 2 оригинальных геимпада + GTA6,все в идеальном состоянии, цена за весь набор 800 у. е. (13080 рубл. ), с одним геимпадом + GTA6 750 у. е. (12263 рубл. ). \nДоставлю вам домой для проверки всего. Без торга. \nПисать в телеграмм, остальных мессенджеров нет или звонить на у",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/045/000074045198.jpg",
+   "title": "PS5 SLIM 1 TB с дисководом + 2 геимпада+GTA 6",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20411",
+   "usd": 750.0
+  },
+  "20621": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "20621",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Pro",
+   "notified": true,
+   "price": 220.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     220.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "220 USD",
+   "text": "Прошивка игровых консолей ps3-4-5, xbox360! Прошитые, можно скачивать из интернета любые игры, вышедшие на пс4 пс5,С последним взломом ПС5 имеет возможно запускать игры с любых приставок начиная от хбокс 360,заканчивая Нинтендо СВИТЧ. Если прошивка надоела в течении 2ух минут убирается! \nPs5 pro вт",
+   "thumb": "https://media.makler.md/production/an/thumb/000/072/177/000072177018.jpg",
+   "title": "PS5-PS4 прошитые(взломанные) Магазин, гарантия, Рассрочка!",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20621",
+   "usd": null
+  },
+  "21728": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "21728",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Slim",
+   "notified": true,
+   "price": 650.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     650.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "650 USD",
+   "text": "PS5 SLIM cfi 2016,версия с памятью 1 TB, в пользовании была меньше месяца, имеет абсолютно новое состояние как внешне так и технически, как будто вы только распечатали новый товар с магазина, при доставке вы сами убедитесь в ее новом состоянии, цена 650 у. е. (10630 рубл. )\nПри необходимости могу у",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/094/000074094923.jpg",
+   "title": "PS5 SLIM CFI 2016,в новом состоянии, как с завода, в упак..",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/21728",
+   "usd": 650.0
+  },
+  "22199": {
+   "baseline": true,
+   "city": "Бендеры",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22199",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "PS5",
+   "notified": true,
+   "price": 700.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     700.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "700 USD",
+   "text": "Продам пс5 новая на 1тб с коробкой \nВ комплекте два джостика \nТорг уместен",
+   "thumb": "https://media.makler.md/production/an/thumb/000/073/903/000073903706.jpg",
+   "title": "Продам пс5 новую",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22199",
+   "usd": 700.0
+  },
+  "22248": {
+   "baseline": true,
+   "city": "Бендеры",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "yes",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22248",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Fat",
+   "notified": true,
+   "price": 700.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     700.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "700 USD",
+   "text": "SONY PLAYSTATION 5 FAT — С ДИСКОВОДОМ\n Мощная игровая консоль для современных игр! \n⚡ Преимущества: \n• Версия с дисководом — игры на дисках и в цифровом формате\n• Быстрый SSD для быстрой загрузки игр\n• Поддержка разрешения до 4K\n• Объёмный звук и полное погружение в игровой процесс\n Сос",
+   "thumb": "https://media.makler.md/production/an/thumb/000/073/988/000073988371.jpg",
+   "title": "PS5 SONY PLAYSTATION 5 FAT — с дисководом ps 5",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22248",
+   "usd": 700.0
+  },
+  "22303": {
+   "baseline": true,
+   "city": "Рыбница",
+   "currency": "RUB",
+   "detail_loaded": false,
+   "disc": "yes",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22303",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Fat",
+   "notified": true,
+   "price": 8000.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     8000.0,
+     "RUB"
+    ]
+   ],
+   "price_raw": "8 000 руб",
+   "text": "Продам PS5 Fat с дисководом. Состояние хорошее, всё работает исправно. Геймпад тоже в хорошем состоянии. \nВ комплекте все кабеля (HDMI порт и кабель питания). На аккаунте есть Resident Evil 7 и Mafia 2. Можете перепривязать аккаунт. \nЛюбые проверки при встрече. \nПисать в ТГ или в Вайбер",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/065/000074065922.jpg",
+   "title": "Playstation 5",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22303",
+   "usd": 489.3
+  },
+  "22328": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "RUB",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22328",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "Pro",
+   "notified": true,
+   "price": 22075.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     22075.0,
+     "RUB"
+    ]
+   ],
+   "price_raw": "22 075 руб",
+   "text": "PS 5 про прошитая (взломанная), вторая ревизия(улучшенное охлаждение, сниженное энергопотребление) состояние новой, гарантия до весны 2028 1350уе(22075р) ЕСли прошивка надоела и хочется в онлайн , прошивка удаляется за 1 минуту.\nВзлом позволяет вам скачивать бесплатно игры на пс5 от любой пристав",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/104/000074104040.jpg",
+   "title": "PS 5 про прошитая, Магазин, гарантия, рассрочка по любому банку",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22328",
+   "usd": 1350.15
+  },
+  "22469": {
+   "baseline": true,
+   "city": "Тирасполь",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "yes",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22469",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "PS5",
+   "notified": true,
+   "price": 1000.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     1000.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "1 000 USD",
+   "text": "Продаю игровую консоль Sony PlayStation 5 с дисководом в отличном состоянии. Комплект б/у, всё аккуратное, в хорошем состоянии.\nВ комплект входит:\n1. Sony PlayStation 5 (PS5) с дисководом.\n2. Оригинальный беспроводной геймпад DualSense — белый.\n3. Беспроводной геймпад DualSense — синий.\n4.",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/316/000074316809.jpg",
+   "title": "Sony PlayStation 5 с 2 джойстиками и зарядкой к ним 5 игр и наушники",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22469",
+   "usd": 1000.0
+  },
+  "22500": {
+   "baseline": true,
+   "city": "Рыбница",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "unknown",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22500",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "PS5",
+   "notified": true,
+   "price": 650.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     650.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "650 USD",
+   "text": "Продам PS5 в отличном состоянии",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/356/000074356807.jpg",
+   "title": "Продам PS5",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22500",
+   "usd": 650.0
+  },
+  "22560": {
+   "baseline": true,
+   "city": "Бендеры",
+   "currency": "USD",
+   "detail_loaded": false,
+   "disc": "yes",
+   "first_seen": "2026-11-25T11:45:10+00:00",
+   "id": "22560",
+   "image": "",
+   "last_seen": "2026-11-25T11:45:10+00:00",
+   "model": "PS5",
+   "notified": true,
+   "price": 700.0,
+   "price_history": [
+    [
+     "2026-11-25T11:45:10+00:00",
+     700.0,
+     "USD"
+    ]
+   ],
+   "price_raw": "700 USD",
+   "text": "SONY PLAYSTATION 5 — PS5 / DISC EDITION\n МОЩНАЯ ИГРОВАЯ КОНСОЛЬ SONY PLAYSTATION 5!\nСовременная игровая приставка для полного погружения в любимые игры. Наслаждайтесь высокой производительностью, быстрой загрузкой и потрясающей графикой нового поколения! \n⚙️ Характеристики: \n• Модель: Sony PlayS",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/406/000074406292.jpg",
+   "title": "SONY PLAYSTATION 5 — PS5 / DISC EDITION",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22560",
+   "usd": 700.0
+  }
+ }
 }
