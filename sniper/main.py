@@ -116,6 +116,9 @@ def run(cfg, state_path, widget_path, fetch, tg, now: str | None = None) -> int:
                                   "baseline": first_run, "image": "", "detail_loaded": False,
                                   "price_history": [[now, it["price"], it["currency"]]]}
             continue
+        if old.get("rejected"):
+            old["last_seen"] = now
+            continue
         prev = {"price": old["price"], "currency": old["currency"], "usd": old["usd"], "price_raw": old.get("price_raw")}
         old.update({k: it[k] for k in ("title", "price", "currency", "price_raw", "city", "thumb", "url")})
         if not old.get("detail_loaded"):

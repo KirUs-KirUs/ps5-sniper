@@ -230,3 +230,17 @@ def test_mixed_listing_price_not_used_for_deal_or_min(paths):
     assert w["min"]["usd"] == 600
     assert w["count"] == 2
     assert not next(t for t in w["top"] if t["id"] == "5")["deal"]
+
+
+def test_rejected_after_detail_never_notified(paths, monkeypatch):
+    site, tg = FakeSite(BASE_PAGES), FakeTG()
+    run(site, tg, paths, "2026-11-25T10:00:00+00:00")
+    monkeypatch.setattr(__import__("tests.test_main", fromlist=["x"]), "ITEM",
+                        ITEM.replace("с дисководом", "Digital Edition, без дисковода"))
+    site.pages = [page(article(9, "Продам PS5", "500 USD"))] + BASE_PAGES
+    run(site, tg, paths, "2026-11-25T11:00:00+00:00")
+    site.pages = [page(article(9, "Продам PS5", "450 USD"))] + BASE_PAGES
+    run(site, tg, paths, "2026-11-25T12:00:00+00:00")
+    assert len(tg.sent) == 1
+    w = json.loads(paths[1].read_text(encoding="utf-8"))
+    assert all(t["id"] != "9" for t in w["top"])
