@@ -263,7 +263,7 @@ def cli():
     if missing:
         # ::error:: попадает в аннотации GitHub, их видно без входа в аккаунт
         print(f"::error::Не заданы секреты: {', '.join(missing)} "
-              "(Settings → Secrets and variables → Actions → Repository secrets)")
+              "— запустите windows\setup.ps1, он создаст файл .env")
         sys.exit(1)
     sys.exit(run(cfg, ROOT / "data" / "state.json", ROOT / "data" / "widget.json", Fetcher(), Telegram(token, chat)))
 
