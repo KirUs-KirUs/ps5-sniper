@@ -68,6 +68,7 @@ powershell -ExecutionPolicy Bypass -File windows\setup.ps1
 
 | Что нужно | Как |
 |---|---|
+| Текущий список | написать боту **/list** (или «список») |
 | Проверить сейчас | написать боту **/check** (или «проверь»). Через минуту придёт отчёт. С ПК: `Start-ScheduledTask -TaskName "PS5 Sniper"` |
 | Посмотреть лог | `logs\run.log` |
 | Изменить интервал | `powershell -ExecutionPolicy Bypass -File windows\setup.ps1 -IntervalMinutes 60` (по умолчанию 20) |
