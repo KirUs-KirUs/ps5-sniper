@@ -1,10 +1,15 @@
 {
- "category_url": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&region[]=3&city[]=1112&city[]=1113&city[]=2&city[]=1248&city[]=4&city[]=3129&city[]=2597&city[]=5&city[]=41&city[]=43&city[]=1250&city[]=3465&city[]=1519&city[]=1249&city[]=1251&currency_id=5&list=detail",
+ "category_url": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&city[]=1112&city[]=1113&currency_id=5&list=detail",
  "max_pages": 25,
  "page_delay_sec": 2,
  "deal_usd": 650,
  "min_usd": 150,
- "rates_per_usd": {"USD": 1, "EUR": 0.91, "MDL": 18.43, "RUB": 16.35},
+ "rates_per_usd": {
+  "USD": 1,
+  "EUR": 0.91,
+  "MDL": 18.43,
+  "RUB": 16.35
+ },
  "active_hours": 6,
  "forget_days": 30,
  "failure_alert_after": 3,
