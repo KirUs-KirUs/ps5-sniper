@@ -1,8 +1,8 @@
 {
- "count": 13,
+ "count": 12,
  "deals": 5,
  "error": null,
- "last_ok": "2026-11-25T11:45:10+00:00",
+ "last_ok": "2026-11-25T11:52:17+00:00",
  "list_url": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&region[]=3&city[]=1112&city[]=1113&city[]=2&city[]=1248&city[]=4&city[]=3129&city[]=2597&city[]=5&city[]=41&city[]=43&city[]=1250&city[]=3465&city[]=1519&city[]=1249&city[]=1251&currency_id=5&list=detail",
  "min": {
   "city": "Рыбница",
@@ -34,16 +34,16 @@
    "usd": 489.3
   },
   {
-   "city": "Рыбница",
+   "city": "Тирасполь",
    "deal": true,
    "disc": "unknown",
-   "id": "22500",
-   "model": "PS5",
+   "id": "20078",
+   "model": "Slim",
    "new": false,
    "price": "$650",
-   "thumb": "https://media.makler.md/production/an/thumb/000/074/356/000074356807.jpg",
-   "title": "Продам PS5",
-   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22500",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/336/000074336638.jpg",
+   "title": "PS 5 SLIM, новая как с завода, меньше месяца в использовании",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20078",
    "usd": 650.0
   },
   {
@@ -63,19 +63,6 @@
    "city": "Тирасполь",
    "deal": true,
    "disc": "unknown",
-   "id": "20078",
-   "model": "Slim",
-   "new": false,
-   "price": "$650",
-   "thumb": "https://media.makler.md/production/an/thumb/000/074/336/000074336638.jpg",
-   "title": "PS 5 SLIM, новая как с завода, меньше месяца в использовании",
-   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20078",
-   "usd": 650.0
-  },
-  {
-   "city": "Тирасполь",
-   "deal": true,
-   "disc": "unknown",
    "id": "21728",
    "model": "Slim",
    "new": false,
@@ -86,16 +73,29 @@
    "usd": 650.0
   },
   {
+   "city": "Рыбница",
+   "deal": true,
+   "disc": "unknown",
+   "id": "22500",
+   "model": "PS5",
+   "new": false,
+   "price": "$650",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/356/000074356807.jpg",
+   "title": "Продам PS5",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22500",
+   "usd": 650.0
+  },
+  {
    "city": "Бендеры",
    "deal": false,
-   "disc": "yes",
-   "id": "22560",
+   "disc": "unknown",
+   "id": "22199",
    "model": "PS5",
    "new": false,
    "price": "$700",
-   "thumb": "https://media.makler.md/production/an/thumb/000/074/406/000074406292.jpg",
-   "title": "SONY PLAYSTATION 5 — PS5 / DISC EDITION",
-   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22560",
+   "thumb": "https://media.makler.md/production/an/thumb/000/073/903/000073903706.jpg",
+   "title": "Продам пс5 новую",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22199",
    "usd": 700.0
   },
   {
@@ -114,16 +114,16 @@
   {
    "city": "Бендеры",
    "deal": false,
-   "disc": "unknown",
-   "id": "22199",
+   "disc": "yes",
+   "id": "22560",
    "model": "PS5",
    "new": false,
    "price": "$700",
-   "thumb": "https://media.makler.md/production/an/thumb/000/073/903/000073903706.jpg",
-   "title": "Продам пс5 новую",
-   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22199",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/406/000074406292.jpg",
+   "title": "SONY PLAYSTATION 5 — PS5 / DISC EDITION",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22560",
    "usd": 700.0
   }
  ],
- "updated": "2026-11-25T11:45:10+00:00"
+ "updated": "2026-11-25T11:52:17+00:00"
 }
