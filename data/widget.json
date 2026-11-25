@@ -2,7 +2,7 @@
  "count": 10,
  "deals": 3,
  "error": null,
- "last_ok": "2026-11-25T16:09:28+00:00",
+ "last_ok": "2026-11-25T16:29:28+00:00",
  "list_url": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&city[]=1112&city[]=1113&currency_id=5&list=detail",
  "min": {
   "city": "Тирасполь",
@@ -125,5 +125,5 @@
    "usd": 1000.0
   }
  ],
- "updated": "2026-11-25T16:09:28+00:00"
+ "updated": "2026-11-25T16:29:28+00:00"
 }
