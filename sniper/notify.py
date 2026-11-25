@@ -114,3 +114,20 @@ def format_check_report(widget: dict, sent: int) -> str:
     if m:
         lines.append(f"Мин. цена: <a href=\"{esc(m['url'])}\">{esc(m['price'])}</a> — PS5 {esc(m['model'])}, {esc(m['city'])}")
     return "\n".join(lines)
+
+
+def format_list(items: list[dict], deal_usd: float, last_ok) -> str:
+    """Ответ на /list: все актуальные подходящие объявления, выгодные сверху."""
+    if not items:
+        return "Подходящих объявлений пока нет."
+    when = ""
+    if last_ok:
+        from datetime import datetime
+        when = " · проверено " + datetime.fromisoformat(last_ok).astimezone().strftime("%d.%m %H:%M")
+    lines = [f"📋 <b>PS5 сейчас: {len(items)}</b>{when}\n"]
+    for l in items[:30]:
+        mark = "🔥" if is_deal(l, deal_usd) else "•"
+        disc = "" if l.get("disc") == "yes" else " ❓диск"
+        lines.append(f"{mark} <a href=\"{esc(l['url'])}\">{esc(_trim(l['title'], 60))}</a> — "
+                     f"{price_str(l)}, {esc(l.get('city'))}{disc}")
+    return "\n".join(lines)
