@@ -1,7 +1,7 @@
 ﻿# Настройка PS5 Sniper на этом ПК: секреты, зависимости, тестовое сообщение, задача в Планировщике.
 # Запуск:  powershell -ExecutionPolicy Bypass -File windows\setup.ps1
-# Другой интервал:  ... -File windows\setup.ps1 -IntervalMinutes 30
-param([int]$IntervalMinutes = 60)
+# Другой интервал:  ... -File windows\setup.ps1 -IntervalMinutes 60
+param([int]$IntervalMinutes = 20)
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
@@ -42,7 +42,17 @@ $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatt
 Register-ScheduledTask -TaskName "PS5 Sniper" -Action $action -Trigger $trigger -Settings $settings `
     -Description "Проверка объявлений PS5 на makler.md" -Force | Out-Null
 
+# 6. Команда /check в Telegram: задача раз в минуту ждёт сообщений бота ~50 с
+$cmdArgs = "--headless `"$py`" -m sniper.commands"
+$cmdAction = New-ScheduledTaskAction -Execute "conhost.exe" -Argument $cmdArgs -WorkingDirectory $root
+$cmdTrigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes 1)
+$cmdSettings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
+    -ExecutionTimeLimit (New-TimeSpan -Minutes 2) -MultipleInstances IgnoreNew
+Register-ScheduledTask -TaskName "PS5 Sniper Commands" -Action $cmdAction -Trigger $cmdTrigger -Settings $cmdSettings `
+    -Description "Команда /check для бота PS5 Sniper" -Force | Out-Null
+
 Write-Host ""
+Write-Host "Команда /check в Telegram включена."
 Write-Host "Готово: задача 'PS5 Sniper' будет запускаться каждые $IntervalMinutes мин. Первая проверка — через минуту."
 Write-Host "Лог: $root\logs\run.log"
-Write-Host "Остановить: Unregister-ScheduledTask -TaskName 'PS5 Sniper' -Confirm:`$false"
+Write-Host "Остановить: Get-ScheduledTask -TaskName 'PS5 Sniper*' | Unregister-ScheduledTask -Confirm:`$false"

@@ -100,3 +100,17 @@ def send_listing(tg, l: dict, deal_usd: float):
         except Exception as e:  # noqa: BLE001 — любой сбой фото -> текст
             print(f"photo failed for {l['id']}: {e}")
     tg.send_message(format_new(l, deal_usd, text_limit=1500))
+
+
+def format_check_report(widget: dict, sent: int) -> str:
+    """Ответ на /check."""
+    if widget.get("status") != "ok":
+        return f"⚠️ <b>Проверка не удалась</b>: Makler недоступен.\n<code>{esc((widget.get('error') or '')[:200])}</code>"
+    lines = ["✅ <b>Проверка завершена</b>"]
+    lines.append(f"Отправлено уведомлений: {sent}" if sent else "Нового нет — все объявления уже присылал.")
+    lines.append(f"Подходящих сейчас: {widget.get('count', 0)} (🔥 до порога: {widget.get('deals', 0)}), "
+                 f"новых за сутки: {widget.get('new_24h', 0)}")
+    m = widget.get("min")
+    if m:
+        lines.append(f"Мин. цена: <a href=\"{esc(m['url'])}\">{esc(m['price'])}</a> — PS5 {esc(m['model'])}, {esc(m['city'])}")
+    return "\n".join(lines)

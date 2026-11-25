@@ -9,7 +9,7 @@ from pathlib import Path
 from .classify import classify
 from .fetch import Fetcher, SiteUnavailable
 from .money import to_usd
-from .notify import Telegram, format_drop, format_summary, is_deal, price_str, send_listing
+from .notify import Telegram, format_check_report, format_drop, format_summary, is_deal, price_str, send_listing
 from .parse import parse_item, parse_list
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -97,6 +97,7 @@ def run(cfg, state_path, widget_path, fetch, tg, now: str | None = None) -> int:
         return 0
 
     rates, deal = cfg["rates_per_usd"], cfg["deal_usd"]
+    sent = 0
     listings = state["listings"]
     first_run = not state["initialized"]
 
@@ -176,6 +177,7 @@ def run(cfg, state_path, widget_path, fetch, tg, now: str | None = None) -> int:
             try:
                 send_listing(tg, l, deal)
                 l["notified"] = True
+                sent += 1
             except Exception as e:  # noqa: BLE001
                 print(f"telegram failed for {l['id']}: {e}")
         # 4. снижения цен
@@ -184,6 +186,7 @@ def run(cfg, state_path, widget_path, fetch, tg, now: str | None = None) -> int:
                 try:
                     tg.send_message(format_drop(l, l["pending_drop"], deal))
                     del l["pending_drop"]
+                    sent += 1
                 except Exception as e:  # noqa: BLE001
                     print(f"telegram drop failed for {l['id']}: {e}")
 
@@ -194,7 +197,7 @@ def run(cfg, state_path, widget_path, fetch, tg, now: str | None = None) -> int:
             health["alerted_down"] = False
         except Exception as e:  # noqa: BLE001
             print(f"telegram recovery failed: {e}")
-    health.update(last_ok=now, consecutive_failures=0, last_error=None)
+    health.update(last_ok=now, consecutive_failures=0, last_error=None, last_sent=sent)
     cutoff = _ts(now) - timedelta(days=cfg["forget_days"])
     for k in [k for k, l in listings.items() if _ts(l["last_seen"]) < cutoff]:
         del listings[k]
@@ -270,7 +273,16 @@ def cli():
         print(f"::error::Не заданы секреты: {', '.join(missing)} "
               "— запустите windows/setup.ps1, он создаст файл .env")
         sys.exit(1)
-    sys.exit(run(cfg, ROOT / "data" / "state.json", ROOT / "data" / "widget.json", Fetcher(), Telegram(token, chat)))
+    tg = Telegram(token, chat)
+    code = run(cfg, ROOT / "data" / "state.json", ROOT / "data" / "widget.json", Fetcher(), tg)
+    flag = ROOT / "logs" / "manual_check.flag"
+    if flag.exists():  # проверку попросили командой /check — отвечаем отчётом
+        flag.unlink()
+        state = load_json(ROOT / "data" / "state.json", new_state())
+        widget = load_json(ROOT / "data" / "widget.json", {})
+        sent = state["health"].get("last_sent", 0) if state["health"]["consecutive_failures"] == 0 else 0
+        tg.send_message(format_check_report(widget, sent))
+    sys.exit(code)
 
 
 if __name__ == "__main__":

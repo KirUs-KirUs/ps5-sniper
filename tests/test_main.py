@@ -259,3 +259,13 @@ def test_listing_failing_new_rules_is_dropped_from_widget(paths, monkeypatch):
     run(site, tg, paths, "2026-11-25T11:00:00+00:00")
     w = json.loads(paths[1].read_text(encoding="utf-8"))
     assert [t["id"] for t in w["top"]] == ["1"]
+
+
+def test_last_sent_counts_notifications_of_this_run(paths):
+    site, tg = FakeSite(BASE_PAGES), FakeTG()
+    run(site, tg, paths, "2026-11-25T10:00:00+00:00")
+    site.pages = [page(article(9, "PS5 Slim", "550 USD"))] + BASE_PAGES
+    run(site, tg, paths, "2026-11-25T11:00:00+00:00")
+    assert json.loads(paths[0].read_text(encoding="utf-8"))["health"]["last_sent"] == 1
+    run(site, tg, paths, "2026-11-25T12:00:00+00:00")
+    assert json.loads(paths[0].read_text(encoding="utf-8"))["health"]["last_sent"] == 0

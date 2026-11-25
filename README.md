@@ -1,6 +1,6 @@
 # 🎮 Makler PS5 Sniper
 
-Каждый час проверяет объявления «Игровые приставки» на makler.md по городам ПМР, находит PS5 (Fat / Slim / Pro, с дисководом) и присылает в Telegram:
+Каждые 20 минут проверяет объявления «Игровые приставки» на makler.md по городам ПМР, находит PS5 (Fat / Slim / Pro, с дисководом) и присылает в Telegram:
 
 - 🆕 **новое объявление**: фото, название, цена, город, описание, дисковод, ссылка;
 - 🔥 **ВЫГОДНО**: цена ≤ $650;
@@ -17,7 +17,7 @@ Makler.md стоит за Cloudflare и отвечает **403** на запро
 - Виджет показывает время последней успешной проверки и становится жёлтым, если данные старше 3 часов.
 
 ```
-Планировщик Windows (каждые 60 мин)
+Планировщик Windows (каждые 20 мин)
    └─ windows\run.ps1
         ├─ git pull
         ├─ python -m sniper.main
@@ -50,7 +50,7 @@ Makler.md стоит за Cloudflare и отвечает **403** на запро
 ```powershell
 powershell -ExecutionPolicy Bypass -File windows\setup.ps1
 ```
-Скрипт спросит токен и chat id и сохранит их в `.env`. Этот файл есть только на вашем ПК и в git не попадает. Затем он установит зависимости, пришлёт в Telegram «✅ Telegram подключён» и создаст задачу **PS5 Sniper** в Планировщике. Через минуту придёт сводка «PS5 Sniper запущен» с текущими подходящими объявлениями.
+Скрипт спросит токен и chat id и сохранит их в `.env`. Этот файл есть только на вашем ПК и в git не попадает. Затем он установит зависимости, пришлёт в Telegram «✅ Telegram подключён» и создаст в Планировщике две задачи: **PS5 Sniper** (проверка каждые 20 минут) и **PS5 Sniper Commands** (раз в минуту ждёт команду /check от бота; чужие чаты игнорируются). Через минуту придёт сводка «PS5 Sniper запущен» с текущими подходящими объявлениями.
 
 ### 3. Виджет на iPhone
 1. Установите бесплатное приложение **Scriptable** из App Store.
@@ -68,14 +68,14 @@ powershell -ExecutionPolicy Bypass -File windows\setup.ps1
 
 | Что нужно | Как |
 |---|---|
-| Проверить сейчас | `Start-ScheduledTask -TaskName "PS5 Sniper"` |
+| Проверить сейчас | написать боту **/check** (или «проверь»). Через минуту придёт отчёт. С ПК: `Start-ScheduledTask -TaskName "PS5 Sniper"` |
 | Посмотреть лог | `logs\run.log` |
-| Изменить интервал | `powershell -ExecutionPolicy Bypass -File windows\setup.ps1 -IntervalMinutes 30` |
+| Изменить интервал | `powershell -ExecutionPolicy Bypass -File windows\setup.ps1 -IntervalMinutes 60` (по умолчанию 20) |
 | Порог «выгодно» | `config.json → deal_usd` (сейчас 650) |
 | Курсы валют | `config.json → rates_per_usd`: сколько руб/лей/евро за $1. Дробные числа только через **точку**: `18.43`, не `18,43` |
 | Другие города | замените `category_url` в `config.json` ссылкой из адресной строки после выбора фильтров на makler.md |
 | Сменить токен/chat id | удалите `.env` и снова запустите `windows\setup.ps1` |
-| **Остановить после покупки** | `Unregister-ScheduledTask -TaskName "PS5 Sniper" -Confirm:$false` |
+| **Остановить после покупки** | `Get-ScheduledTask -TaskName "PS5 Sniper*" \| Unregister-ScheduledTask -Confirm:$false` |
 
 ## Ограничения
 - Проверки идут, только пока ПК включён и не спит.
