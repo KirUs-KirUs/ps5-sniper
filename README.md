@@ -76,7 +76,7 @@ iPhone: Scriptable читает data/widget.json по raw-ссылке
 |---|---|
 | Изменить интервал | `.github/workflows/monitor.yml`, строка `cron`: `"*/30 * * * *"` каждые 30 мин, `"17 */2 * * *"` каждые 2 часа |
 | Порог «выгодно» | `config.json → deal_usd` (сейчас 650) |
-| Курсы валют | `config.json → rates_per_usd`: сколько руб/лей/евро за $1 |
+| Курсы валют | `config.json → rates_per_usd`: сколько руб/лей/евро за $1. Дробные числа только через **точку**: `18.43`, не `18,43` |
 | Другие города | замените `category_url` в `config.json` ссылкой из адресной строки после выбора фильтров на makler.md |
 | Проверить сейчас | Actions → PS5 Sniper → Run workflow |
 | **Остановить после покупки** | Actions → PS5 Sniper → «⋯» → **Disable workflow** (или удалить репозиторий) |

@@ -4,7 +4,7 @@
  "page_delay_sec": 2,
  "deal_usd": 650,
  "min_usd": 150,
- "rates_per_usd": {"USD": 1, "EUR": 0,91, "MDL": 18,43, "RUB": 16.35},
+ "rates_per_usd": {"USD": 1, "EUR": 0.91, "MDL": 18.43, "RUB": 16.35},
  "active_hours": 6,
  "forget_days": 30,
  "failure_alert_after": 3,

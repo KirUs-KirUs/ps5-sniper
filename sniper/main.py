@@ -244,10 +244,18 @@ def build_widget(cfg, state, now) -> dict:
 def cli():
     cfg = load_json(ROOT / "config.json", None)
     token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
-    if not token or not chat:
-        sys.exit("Нужны переменные окружения TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID")
+    missing = [n for n, v in (("TELEGRAM_BOT_TOKEN", token), ("TELEGRAM_CHAT_ID", chat)) if not v]
+    if missing:
+        # ::error:: попадает в аннотации GitHub, их видно без входа в аккаунт
+        print(f"::error::Не заданы секреты: {', '.join(missing)} "
+              "(Settings → Secrets and variables → Actions → Repository secrets)")
+        sys.exit(1)
     sys.exit(run(cfg, ROOT / "data" / "state.json", ROOT / "data" / "widget.json", Fetcher(), Telegram(token, chat)))
 
 
 if __name__ == "__main__":
-    cli()
+    try:
+        cli()
+    except Exception as e:  # noqa: BLE001
+        print(f"::error::{type(e).__name__}: {e}")
+        raise

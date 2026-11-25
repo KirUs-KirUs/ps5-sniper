@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -39,6 +39,7 @@ jobs:
         run: |
           git config user.name "ps5-sniper-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          [ -d data ] || { echo "no data yet"; exit 0; }
           git add data/
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           git commit -m "data: update $(date -u +%Y-%m-%dT%H:%MZ)"
