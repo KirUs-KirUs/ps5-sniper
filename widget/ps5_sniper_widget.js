@@ -2,7 +2,7 @@
 // Вставьте ссылку на ваш widget.json в DATA_URL (или в «Parameter» виджета).
 // Поддерживаются размеры: Small, Medium, Large.
 
-const DATA_URL = "https://raw.githubusercontent.com/<GITHUB_USER>/<REPO>/main/data/widget.json";
+const DATA_URL = "https://raw.githubusercontent.com/KirUs-KirUs/ps5-sniper/main/data/widget.json";
 
 const C = {
   bg1: new Color("#05070f"),

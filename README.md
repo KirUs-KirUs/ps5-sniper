@@ -44,7 +44,7 @@ iPhone: Scriptable читает data/widget.json по raw-ссылке
 1. Создайте на github.com **публичный** репозиторий, например `ps5-sniper`, без README.
 2. Загрузите проект. В PowerShell из папки проекта:
    ```powershell
-   git remote add origin https://github.com/<ВАШ_ЛОГИН>/ps5-sniper.git
+   git remote add origin https://github.com/KirUs-KirUs/ps5-sniper.git
    git push -u origin main
    ```
 3. Откройте **Settings → Secrets and variables → Actions → New repository secret** и создайте два секрета:
@@ -60,7 +60,7 @@ iPhone: Scriptable читает data/widget.json по raw-ссылке
 1. Установите бесплатное приложение **Scriptable** из App Store.
 2. В Scriptable нажмите **+** и вставьте содержимое `widget/ps5_sniper_widget.js`.
 3. В строке `DATA_URL` подставьте свою ссылку:
-   `https://raw.githubusercontent.com/<ВАШ_ЛОГИН>/ps5-sniper/main/data/widget.json`
+   `https://raw.githubusercontent.com/KirUs-KirUs/ps5-sniper/main/data/widget.json`
 4. Назовите скрипт `PS5 Sniper` и запустите ▶️ для проверки.
 5. На рабочем столе: долгое нажатие → **+** → Scriptable → выберите размер (Small / Medium / Large) → **Edit Widget** → Script: `PS5 Sniper`. Нажатие на виджет сразу открывает объявление (или категорию), «When Interacting» можно не трогать.
 
