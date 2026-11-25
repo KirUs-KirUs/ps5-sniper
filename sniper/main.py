@@ -241,7 +241,22 @@ def build_widget(cfg, state, now) -> dict:
     }
 
 
+def load_env(path: Path):
+    """Подхватывает KEY=VALUE из локального .env (не в git). Переменные окружения важнее файла."""
+    try:
+        lines = Path(path).read_text(encoding="utf-8-sig").splitlines()
+    except FileNotFoundError:
+        return
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = (p.strip() for p in line.split("=", 1))
+        os.environ.setdefault(key, value.strip('"').strip("'"))
+
+
 def cli():
+    load_env(ROOT / ".env")
     cfg = load_json(ROOT / "config.json", None)
     token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
     missing = [n for n, v in (("TELEGRAM_BOT_TOKEN", token), ("TELEGRAM_CHAT_ID", chat)) if not v]
