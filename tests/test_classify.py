@@ -41,6 +41,9 @@ CASES = [
     ("Донат Playstation — пополнение в Приднестровье", "PS5 и PS4", False, None, None),
     ("Продам комплект виртуальной реальности Sony PlayStation VR2", "для PS5", False, None, None),
     ("Шлем PlayStation VR 2", "ps5", False, None, None),
+    ("Подготовь PlayStation 5 к GTA VI — приноси на чистку и замену термопасты", "", False, None, None),
+    ("Чистка PS5 от пыли", "", False, None, None),
+    ("Обслуживание и сервис PS5", "", False, None, None),
 ]
 
 

@@ -244,3 +244,18 @@ def test_rejected_after_detail_never_notified(paths, monkeypatch):
     assert len(tg.sent) == 1
     w = json.loads(paths[1].read_text(encoding="utf-8"))
     assert all(t["id"] != "9" for t in w["top"])
+
+
+def test_listing_failing_new_rules_is_dropped_from_widget(paths, monkeypatch):
+    site, tg = FakeSite([page(article(7, "PS5 Slim с дисководом", "600 USD"),
+                              article(1, "PS5 Slim с дисководом", "620 USD"))]), FakeTG()
+    run(site, tg, paths, "2026-11-25T10:00:00+00:00")
+    import sniper.main as sm
+    real = sm.classify
+    monkeypatch.setattr(sm, "classify", lambda t, x="": {**real(t, x), "is_ps5": False, "reason": "rule"}
+                        if "7" in x else real(t, x))
+    site.pages = [page(article(7, "PS5 Slim с дисководом", "600 USD", text="7"),
+                       article(1, "PS5 Slim с дисководом", "620 USD"))]
+    run(site, tg, paths, "2026-11-25T11:00:00+00:00")
+    w = json.loads(paths[1].read_text(encoding="utf-8"))
+    assert [t["id"] for t in w["top"]] == ["1"]

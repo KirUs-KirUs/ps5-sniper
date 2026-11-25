@@ -103,7 +103,12 @@ def run(cfg, state_path, widget_path, fetch, tg, now: str | None = None) -> int:
     # 1. отбор PS5 и обновление состояния
     for it in items:
         c = classify(it["title"], it["text"])
+        known = listings.get(it["id"])
+        if not c["is_ps5"] and known and known.get("detail_loaded"):
+            c = classify(it["title"], known["text"])  # полное описание точнее отрывка из списка
         if not c["is_ps5"]:
+            if known and not known.get("rejected"):
+                known["rejected"] = c["reason"]  # правила стали строже — убираем из виджета
             continue
         # в объявлениях «PS5/PS4» цена обычно «от» и относится к другой консоли — в доллары не пересчитываем
         usd = None if c["mixed"] else to_usd(it["price"], it["currency"], rates)
