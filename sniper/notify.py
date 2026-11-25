@@ -1,5 +1,6 @@
 """Telegram-уведомления."""
 import html
+import re
 
 import requests
 
@@ -52,7 +53,7 @@ def is_deal(l: dict, deal_usd: float) -> bool:
 
 
 def _trim(text: str, limit: int) -> str:
-    text = (text or "").strip()
+    text = re.sub(r"[ \t]*\n\s*", "\n", (text or "").strip())
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
 
 
