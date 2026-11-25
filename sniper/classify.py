@@ -10,7 +10,7 @@ PS5 = re.compile(
 # Всегда исключаем, если встречается в заголовке
 HARD_EXCLUDE = re.compile(
     r"аренд|прокат|посуточн|куплю|скупа|скупк|купим|выкуп|обмен\w*\s+.{0,40}\bна\s+(?:ps|пс|play)"
-    r"|ремонт|прошивк|подписк|ps\s?plus|ps\s?store|аккаунт|акаунт|запчаст|portal|портал"
+    r"|ремонт|^s*прошивк|услуг|подписк|ps\s?plus|ps\s?store|аккаунт|акаунт|запчаст|portal|портал|донат|пополнен|\bvr\s?2?\b|виртуальн|шлем|очки"
     r"|^\s*(?:игр[аыу]|диск[иа]?|геймпад|gamepad|джойстик|dualsense|контроллер)\b"
 )
 
@@ -58,7 +58,7 @@ def _disc(s: str) -> str:
 
 def classify(title: str, text: str = "") -> dict:
     t, x = _norm(title), _norm(text)
-    res = {"is_ps5": False, "model": None, "disc": None, "reason": ""}
+    res = {"is_ps5": False, "model": None, "disc": None, "reason": "", "mixed": bool(OTHER_CONSOLE.search(t))}
 
     m = PS5.search(t)
     source = t

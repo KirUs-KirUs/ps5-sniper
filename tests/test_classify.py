@@ -16,6 +16,8 @@ CASES = [
     ("Playstation 5 + 3 игры и геймпад", "Blu-ray работает", True, "PS5", "yes"),
     ("Продам приставку", "PS5 slim, дисковод, 2 джойстика", True, "Slim", "yes"),
     ("ps5", "", True, "PS5", "unknown"),
+    ("PS5 Slim прошивка 4.03, с дисководом", "", True, "Slim", "yes"),
+    ("Прошивка PS5 и PS4 недорого", "", False, None, None),
     ("PlayStation5 Slim Disc Edition", "", True, "Slim", "yes"),
     # исключения
     ("Подписка PS PLUS и игры на PlayStation", "PS5", False, None, None),
@@ -36,6 +38,9 @@ CASES = [
     ("SONY PLAYSTATION Portal", "для PS5", False, None, None),
     ("Продам турецкий аккаунт PS Store", "PS5", False, None, None),
     ("Death stranding на пс4,5", "", False, None, None),
+    ("Донат Playstation — пополнение в Приднестровье", "PS5 и PS4", False, None, None),
+    ("Продам комплект виртуальной реальности Sony PlayStation VR2", "для PS5", False, None, None),
+    ("Шлем PlayStation VR 2", "ps5", False, None, None),
 ]
 
 
@@ -48,3 +53,8 @@ def test_classify(title, text, is_ps5, model, disc):
         assert r["disc"] == disc
     elif disc is not None:
         assert r["disc"] == disc
+
+
+def test_mixed_console_listing_flagged():
+    assert classify("PS5-PS4 прошитые(взломанные) Магазин", "")["mixed"] is True
+    assert classify("PS5 Slim с дисководом", "")["mixed"] is False
