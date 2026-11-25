@@ -1,8 +1,8 @@
 {
- "count": 10,
+ "count": 11,
  "deals": 3,
  "error": null,
- "last_ok": "2026-11-25T18:00:39+00:00",
+ "last_ok": "2026-11-25T20:57:22+00:00",
  "list_url": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&city[]=1112&city[]=1113&currency_id=5&list=detail",
  "min": {
   "city": "Тирасполь",
@@ -17,7 +17,7 @@
   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20078",
   "usd": 650.0
  },
- "new_24h": 0,
+ "new_24h": 1,
  "status": "ok",
  "top": [
   {
@@ -114,16 +114,16 @@
   {
    "city": "Тирасполь",
    "deal": false,
-   "disc": "yes",
-   "id": "22469",
-   "model": "PS5",
-   "new": false,
-   "price": "$1 000",
-   "thumb": "https://media.makler.md/production/an/thumb/000/074/316/000074316809.jpg",
-   "title": "Sony PlayStation 5 с 2 джойстиками и зарядкой к ним 5 игр и наушники",
-   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22469",
-   "usd": 1000.0
+   "disc": "unknown",
+   "id": "22490",
+   "model": "Slim",
+   "new": true,
+   "price": "13 500 руб (~$826)",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/340/000074340957.jpg",
+   "title": "Продам PS 5 Slim",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22490",
+   "usd": 825.69
   }
  ],
- "updated": "2026-11-25T18:00:39+00:00"
+ "updated": "2026-11-25T20:57:22+00:00"
 }
