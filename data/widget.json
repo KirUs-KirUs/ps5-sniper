@@ -1,8 +1,8 @@
 {
- "count": 10,
+ "count": 9,
  "deals": 3,
  "error": null,
- "last_ok": "2026-11-26T00:29:28+00:00",
+ "last_ok": "2026-11-26T13:36:01+00:00",
  "list_url": "https://makler.md/ru/computers-and-office-equipment/game-consoles?list&city[]=1112&city[]=1113&currency_id=5&list=detail",
  "min": {
   "city": "Тирасполь",
@@ -76,19 +76,6 @@
    "city": "Бендеры",
    "deal": false,
    "disc": "yes",
-   "id": "22248",
-   "model": "Fat",
-   "new": false,
-   "price": "$700",
-   "thumb": "https://media.makler.md/production/an/thumb/000/073/988/000073988371.jpg",
-   "title": "PS5 SONY PLAYSTATION 5 FAT — с дисководом ps 5",
-   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22248",
-   "usd": 700.0
-  },
-  {
-   "city": "Бендеры",
-   "deal": false,
-   "disc": "yes",
    "id": "22560",
    "model": "PS5",
    "new": false,
@@ -101,15 +88,28 @@
   {
    "city": "Тирасполь",
    "deal": false,
+   "disc": "yes",
+   "id": "20411",
+   "model": "Slim",
+   "new": false,
+   "price": "$750",
+   "thumb": "https://media.makler.md/production/an/thumb/000/074/045/000074045198.jpg",
+   "title": "PS5 SLIM 1 TB с дисководом + 2 геимпада+GTA 6",
+   "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/20411",
+   "usd": 750.0
+  },
+  {
+   "city": "Тирасполь",
+   "deal": false,
    "disc": "unknown",
    "id": "22490",
    "model": "Slim",
    "new": true,
-   "price": "13 500 руб (~$826)",
+   "price": "13 000 руб (~$795)",
    "thumb": "https://media.makler.md/production/an/thumb/000/074/340/000074340957.jpg",
    "title": "Продам PS 5 Slim",
    "url": "https://makler.md/ru/computers-and-office-equipment/game-consoles/an/22490",
-   "usd": 825.69
+   "usd": 795.11
   },
   {
    "city": "Тирасполь",
@@ -125,5 +125,5 @@
    "usd": 1000.0
   }
  ],
- "updated": "2026-11-26T00:29:28+00:00"
+ "updated": "2026-11-26T13:36:01+00:00"
 }
